@@ -90,7 +90,7 @@
     <!-- Navbar -->
     <nav class="border-b border-logiBorder py-6 px-8 flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur z-50">
         <div class="text-2xl font-bold tracking-tighter uppercase flex items-center gap-2">
-            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <i data-lucide="hammer" class="w-6 h-6 text-logiCyan"></i>
                 Marcenaria<span class="text-logiCyan">do</span>João
             </a>
@@ -109,12 +109,12 @@
 
     <!-- Hero Scroll Container (Pinned) -->
     <div id="produto" class="relative">
-        <div id="hero-scroll-container" class="relative" style="height: 400vh;">
-            <section class="h-screen sticky top-0 border-b border-logiBorder overflow-hidden relative flex items-center">
+        <div id="hero-scroll-container" class="relative" style="height: 400dvh;">
+            <section class="h-[100dvh] sticky top-0 border-b border-logiBorder overflow-hidden relative flex items-center">
             
             <!-- Video Background -->
             <div class="absolute inset-0 z-0 flex justify-end items-center pointer-events-none overflow-hidden">
-                <video id="hero-video" src="mesa-keyframes.mp4" muted playsinline class="w-full h-[120%] object-contain translate-x-1/4 md:translate-x-1/4 scale-125 md:scale-110"></video>
+                <video id="hero-video" src="mesa-keyframes.mp4" muted playsinline webkit-playsinline preload="auto" class="w-full h-[120%] object-contain translate-x-1/4 md:translate-x-1/4 scale-125 md:scale-110"></video>
             </div>
             
             <!-- Gradient Overlay -->
@@ -187,7 +187,7 @@
             <!-- Card 1 -->
             <div class="flex flex-col group" id="verniz-card">
                 <div class="bg-[#F8F9FA] aspect-[16/9] flex items-center justify-center mb-6 border border-logiBorder transition-colors group-hover:border-logiDark relative overflow-hidden">
-                    <video id="verniz-video" src="material%20IA/mesa-dobravel/mesa-dobravel-5-juntas.mp4" muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                    <video id="verniz-video" src="material%20IA/mesa-dobravel/mesa-dobravel-5-juntas.mp4" muted playsinline webkit-playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Dobradiças Ocultas</h3>
                 <p class="text-logiGray text-sm leading-relaxed pr-4">
@@ -369,7 +369,7 @@
         const video = document.getElementById('hero-video');
 
         // Pré-carrega o vídeo para ter a duração
-        video.addEventListener('loadedmetadata', () => {
+        const initVideoScroll = () => {
             let requestAnimationFrameId = null;
 
             const updateVideoProgress = () => {
@@ -395,15 +395,26 @@
                 requestAnimationFrameId = null;
             };
 
-            window.addEventListener('scroll', () => {
+            // Scroll listener compatível com mobile
+            const handleScroll = () => {
                 if (!requestAnimationFrameId) {
                     requestAnimationFrameId = requestAnimationFrame(updateVideoProgress);
                 }
-            }, { passive: true });
+            };
+
+            window.addEventListener('scroll', handleScroll, { passive: true });
             
             // Define o estado inicial logo no carregamento
             updateVideoProgress();
-        });
+        };
+
+        // Aguarda o vídeo estar pronto (compatível com mobile)
+        if (video.readyState >= 1) {
+            initVideoScroll();
+        } else {
+            video.addEventListener('loadedmetadata', initVideoScroll, { once: true });
+            video.addEventListener('canplaythrough', initVideoScroll, { once: true });
+        }
 
         // Lógica para o vídeo de Hover no card
         const vernizCard = document.getElementById('verniz-card');
