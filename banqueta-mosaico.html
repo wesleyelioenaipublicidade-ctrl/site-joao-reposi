@@ -112,8 +112,13 @@
         <div id="hero-scroll-container" class="relative" style="height: 400dvh;">
             <section class="h-[100dvh] sticky top-0 border-b border-logiBorder overflow-hidden relative flex flex-col md:flex-row items-center">
             
+            <!-- Video Background -->
+            <div class="relative z-10 w-full md:absolute md:inset-0 md:flex md:justify-end md:items-center md:pointer-events-none md:overflow-hidden order-1 md:order-2 h-[60dvh] md:h-auto">
+                <video id="hero-video" src="banqueta-keyframes.mp4" muted playsinline webkit-playsinline preload="auto" class="w-full h-full object-contain md:w-full md:h-[120%] md:object-contain md:translate-x-1/4 md:scale-110"></video>
+            </div>
+            
             <!-- Text Content -->
-            <div class="relative z-20 p-8 md:p-24 flex flex-col justify-center w-full md:w-3/5 pt-20 md:pt-28 order-1 md:order-1">
+            <div class="relative z-20 p-8 md:p-24 flex flex-col justify-center w-full md:w-3/5 pt-4 md:pt-28 order-2 md:order-1">
                 <div class="inline-block bg-logiDark text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6 w-max">
                     Nova Coleção
                 </div>
@@ -127,11 +132,6 @@
                     <button class="btn-primary py-4 px-10">Comprar Unitário</button>
                     <button class="btn-secondary py-4 px-10 bg-white/50 backdrop-blur-sm">Comprar Por Encomenda</button>
                 </div>
-            </div>
-
-            <!-- Video Background -->
-            <div class="relative z-10 w-full md:absolute md:inset-0 md:flex md:justify-end md:items-center md:pointer-events-none md:overflow-hidden order-2 md:order-2 h-[50dvh] md:h-auto">
-                <video id="hero-video" src="banqueta-keyframes.mp4" muted playsinline webkit-playsinline preload="auto" class="w-full h-full object-contain md:w-full md:h-[120%] md:object-contain md:translate-x-1/4 md:scale-110"></video>
             </div>
             
             <!-- Gradient Overlay (Desktop only) -->
