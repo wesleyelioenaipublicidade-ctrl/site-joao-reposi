@@ -109,10 +109,9 @@
         </div>
     </nav>
 
-    <!-- Hero Scroll Container (Pinned) -->
+    <!-- Hero Section -->
     <div id="produto" class="relative">
-        <div id="hero-scroll-container" class="relative" style="height: 400dvh;">
-            <section class="h-[100dvh] sticky top-0 border-b border-logiBorder md:overflow-hidden relative flex flex-col md:flex-row items-center">
+        <section class="min-h-auto md:min-h-screen border-b border-logiBorder md:overflow-hidden relative flex flex-col md:flex-row items-center py-8 md:py-0">
             
             <!-- Text Content -->
             <div class="relative z-20 p-8 md:p-24 flex flex-col justify-center w-full md:w-1/2 pt-4 md:pt-28 order-1 md:order-1">
@@ -155,7 +154,6 @@
                 <span class="font-bold uppercase text-sm">Design Exclusivo</span>
             </div>
         </section>
-    </div>
     </div>
 
     <!-- Features Banner (Logitech Style) -->
@@ -382,58 +380,6 @@
 
     <script>
         lucide.createIcons();
-
-        // Lógica para controle do vídeo por Scroll
-        const scrollContainer = document.getElementById('hero-scroll-container');
-        const video = document.getElementById('hero-video');
-
-        // Pré-carrega o vídeo para ter a duração
-        const initVideoScroll = () => {
-            let requestAnimationFrameId = null;
-
-            const updateVideoProgress = () => {
-                const rect = scrollContainer.getBoundingClientRect();
-                const maxScroll = rect.height - window.innerHeight;
-                
-                // rect.top é a distância do topo do container para o topo da tela.
-                // Será <= 0 quando começarmos a rolar por ele.
-                if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
-                    // Progresso de 0 a 1
-                    let progress = -rect.top / maxScroll;
-                    progress = Math.max(0, Math.min(1, progress));
-                    
-                    if (isFinite(video.duration) && video.duration > 0) {
-                        video.currentTime = progress * video.duration;
-                    }
-                } else if (rect.top > 0) {
-                    video.currentTime = 0;
-                } else if (rect.bottom < window.innerHeight && isFinite(video.duration)) {
-                    video.currentTime = video.duration;
-                }
-
-                requestAnimationFrameId = null;
-            };
-
-            // Scroll listener compatível com mobile
-            const handleScroll = () => {
-                if (!requestAnimationFrameId) {
-                    requestAnimationFrameId = requestAnimationFrame(updateVideoProgress);
-                }
-            };
-
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            
-            // Define o estado inicial logo no carregamento
-            updateVideoProgress();
-        };
-
-        // Aguarda o vídeo estar pronto (compatível com mobile)
-        if (video.readyState >= 1) {
-            initVideoScroll();
-        } else {
-            video.addEventListener('loadedmetadata', initVideoScroll, { once: true });
-            video.addEventListener('canplaythrough', initVideoScroll, { once: true });
-        }
 
         // Lógica para o vídeo de Hover no card de Mosaico
         const mosaicoCard = document.getElementById('mosaico-card');
