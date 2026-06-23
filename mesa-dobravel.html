@@ -80,8 +80,10 @@
             justify-content: center;
             align-items: center;
         }
-        img {
-            mix-blend-mode: multiply;
+        @media (min-width: 769px) {
+            img {
+                mix-blend-mode: multiply;
+            }
         }
     </style>
 </head>
@@ -197,7 +199,7 @@
             <!-- Card 1 -->
             <div class="flex flex-col group" id="verniz-card">
                 <div class="bg-[#F8F9FA] aspect-[16/9] flex items-center justify-center mb-6 border border-logiBorder transition-colors group-hover:border-logiDark relative overflow-hidden">
-                    <video id="verniz-video" src="material%20IA/mesa-dobravel/mesa-dobravel-5-juntas.mp4" muted playsinline webkit-playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                    <video id="verniz-video" src="material%20IA/mesa-dobravel/mesa-dobravel-5-juntas.mp4" muted playsinline webkit-playsinline preload="auto" autoplay loop class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
                 </div>
                 <h3 class="text-xl font-bold mb-2">Dobradiças Ocultas</h3>
                 <p class="text-logiGray text-sm leading-relaxed pr-4">
