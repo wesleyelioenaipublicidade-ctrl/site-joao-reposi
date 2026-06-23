@@ -1,0 +1,76 @@
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="product-card group relative flex flex-col h-full">
+                <div class="absolute top-4 left-4 bg-logiDark text-white px-2 py-1 text-xs font-bold uppercase z-10">
+                    Combo
+                </div>
+                <div class="product-image-container h-80">
+                    <a href="banqueta-mosaico.html" class="block w-full h-full">
+                        <img src="material%20original/banqueta/banqueta-1.PNG" alt="Banqueta" class="h-full object-contain mx-auto group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <p class="text-xs text-logiGray font-bold tracking-widest uppercase mb-2">SKU: 001</p>
+                    <a href="banqueta-mosaico.html"><h3 class="text-xl font-bold mb-2 hover:text-logiCyan transition-colors">Banqueta Mosaico</h3></a>
+                    <p class="text-sm text-logiGray mb-6 flex-grow">Acento assimétrico para encaixe perfeito. Sem fios, sem cabos, apenas madeira pura.</p>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="https://wa.me/5514991267349?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20comprar%20a%20unidade%20da%20banqueta%20mosaico" target="_blank" class="btn-primary w-full py-3 flex justify-center items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Comprar Unitário
+                        </a>
+                        <a href="https://wa.me/5514991267349?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20comprar%20por%20encomenda%20a%20banqueta%20mosaico" target="_blank" class="btn-secondary w-full py-3 flex justify-center items-center gap-2">
+                            <i data-lucide="calendar" class="w-4 h-4"></i> Por Encomenda
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card group relative flex flex-col h-full">
+                <div class="product-image-container h-80">
+                    <a href="mesa-dobravel.html" class="block w-full h-full">
+                        <img src="material%20original/mesa/mesa-1.PNG" alt="Mesa de Jantar" class="h-full object-contain mx-auto group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <p class="text-xs text-logiGray font-bold tracking-widest uppercase mb-2">SKU: 002</p>
+                    <a href="mesa-dobravel.html"><h3 class="text-xl font-bold mb-2 hover:text-logiCyan transition-colors">Mesa Dobrável</h3></a>
+                    <p class="text-sm text-logiGray mb-6 flex-grow">Superfície plana, bordas retas (0px border-radius). Minimalista e elegante para qualquer ambiente.</p>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="https://wa.me/5514991267349?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20comprar%20a%20unidade%20da%20mesa%20dobr%C3%A1vel" target="_blank" class="btn-primary w-full py-3 flex justify-center items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Comprar Unitário
+                        </a>
+                        <a href="https://wa.me/5514991267349?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20comprar%20por%20encomenda%20a%20mesa%20dobr%C3%A1vel" target="_blank" class="btn-secondary w-full py-3 flex justify-center items-center gap-2">
+                            <i data-lucide="calendar" class="w-4 h-4"></i> Por Encomenda
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card group relative flex flex-col h-full">
+                <div class="product-image-container h-80">
+                    <a href="cadeira-dobravel.html" class="block w-full h-full">
+                        <img src="material%20original/cadeira/cadeira-1.PNG" alt="Cadeira Office" class="h-full object-contain mx-auto group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                </div>
+                <div class="p-8 flex flex-col flex-grow">
+                    <p class="text-xs text-logiGray font-bold tracking-widest uppercase mb-2">SKU: 003</p>
+                    <a href="cadeira-dobravel.html"><h3 class="text-xl font-bold mb-2 hover:text-logiCyan transition-colors">Cadeira Dobrável</h3></a>
+                    <p class="text-sm text-logiGray mb-6 flex-grow">Desfrute de silêncio quase total ao sentar. Suspensão automática quando não estiver em uso.</p>
+                    
+                    <div class="flex flex-col gap-3">
+                        <a href="https://wa.me/5514991267349?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20comprar%20a%20unidade%20da%20cadeira%20dobr%C3%A1vel" target="_blank" class="btn-primary w-full py-3 flex justify-center items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i> Comprar Unitário
+                        </a>
+                        <a href="https://wa.me/5514991267349?text=Ol%C3%A1!%20Vim%20pelo%20site%2C%20quero%20comprar%20por%20encomenda%20a%20cadeira%20dobr%C3%A1vel" target="_blank" class="btn-secondary w-full py-3 flex justify-center items-center gap-2">
+                            <i data-lucide="calendar" class="w-4 h-4"></i> Por Encomenda
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
