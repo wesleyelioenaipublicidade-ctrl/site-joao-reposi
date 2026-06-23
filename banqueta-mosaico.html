@@ -112,13 +112,8 @@
         <div id="hero-scroll-container" class="relative" style="height: 400dvh;">
             <section class="h-[100dvh] sticky top-0 border-b border-logiBorder md:overflow-hidden relative flex flex-col md:flex-row items-center">
             
-            <!-- Video Background -->
-            <div class="relative z-10 w-full md:absolute md:inset-0 md:flex md:justify-end md:items-center md:pointer-events-none md:overflow-hidden order-1 md:order-2 h-[60dvh] md:h-auto">
-                <video id="hero-video" src="banqueta-keyframes.mp4" muted playsinline webkit-playsinline preload="auto" class="w-full h-full object-contain md:w-full md:h-[120%] md:object-contain md:translate-x-1/4 md:scale-110"></video>
-            </div>
-            
             <!-- Text Content -->
-            <div class="relative z-20 p-8 md:p-24 flex flex-col justify-center w-full md:w-3/5 pt-4 md:pt-28 order-2 md:order-1">
+            <div class="relative z-20 p-8 md:p-24 flex flex-col justify-center w-full md:w-3/5 pt-4 md:pt-28 order-1 md:order-1">
                 <div class="inline-block bg-logiDark text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-6 w-max">
                     Nova Coleção
                 </div>
@@ -128,11 +123,26 @@
                 <p class="text-gray-800 font-medium text-base md:text-xl max-w-md mb-8 md:mb-10 leading-relaxed">
                     Móveis minimalistas com a simplicidade do plug-and-play. Encaixe perfeito para o seu ambiente, combinando funcionalidade, estética e conforto.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="btn-primary py-4 px-10">Comprar Unitário</button>
-                    <button class="btn-secondary py-4 px-10 bg-white/50 backdrop-blur-sm">Comprar Por Encomenda</button>
+                <!-- Desktop Buttons -->
+                <div class="hidden md:flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5514991267349?text=Olá, gostaria de comprar a Banqueta Mosaico unitária" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-10">Comprar Unitário</a>
+                    <a href="https://wa.me/5514991267349?text=Olá, gostaria de fazer uma encomenda da Banqueta Mosaico" target="_blank" rel="noopener noreferrer" class="btn-secondary py-4 px-10 bg-white/50 backdrop-blur-sm">Comprar Por Encomenda</a>
                 </div>
             </div>
+
+            <!-- Video Background -->
+            <div class="relative z-10 w-full md:absolute md:inset-0 md:flex md:justify-end md:items-center md:pointer-events-none md:overflow-hidden order-2 md:order-2 h-[60dvh] md:h-auto">
+                <video id="hero-video" src="banqueta-keyframes.mp4" muted playsinline webkit-playsinline preload="auto" class="w-full h-full object-contain md:w-full md:h-[120%] md:object-contain md:translate-x-1/4 md:scale-110"></video>
+            </div>
+
+            <!-- Buttons (Mobile only, after video) -->
+            <div class="relative z-20 px-8 pb-8 md:hidden order-3">
+                <div class="flex flex-col gap-4">
+                    <a href="https://wa.me/5514991267349?text=Olá, gostaria de comprar a Banqueta Mosaico unitária" target="_blank" rel="noopener noreferrer" class="btn-primary py-4 px-10 text-center block">Comprar Unitário</a>
+                    <a href="https://wa.me/5514991267349?text=Olá, gostaria de fazer uma encomenda da Banqueta Mosaico" target="_blank" rel="noopener noreferrer" class="btn-secondary py-4 px-10 bg-white/50 backdrop-blur-sm text-center block">Comprar Por Encomenda</a>
+                </div>
+            </div>
+
             
             <!-- Gradient Overlay (Desktop only) -->
             <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
